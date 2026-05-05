@@ -12,6 +12,7 @@
 
 ```
 ├── docs/
+│   ├── getting-started/     # 快速入門：安裝指南、實用 Skills 推薦（含踩坑記錄）
 │   ├── 01-fundamentals/     # 核心概念：什麼是 Agent、架構、規劃推理、工具使用、記憶系統
 │   ├── 02-frameworks/       # 框架深度解析：Hermes Agent、LangChain、CrewAI、比較與選擇
 │   ├── 03-patterns/         # 設計模式：ReAct、Plan-Execute、Reflection、Multi-Agent、Tool Calling、RAG
@@ -21,7 +22,6 @@
 │   ├── 07-advanced/         # 進階主題：自我演化 (GEPA)、向量記憶深度分析、多 Agent 協調
 │   └── 08-case-studies/     # 實戰案例：Hermes 生態全景、股票掃描器
 ├── assets/diagrams/         # 架構圖（開瀏覽器即可檢視的 HTML）
-├── examples/                # 程式碼範例與配置樣板
 └── references/              # 論文清單與外部資源
 ```
 
@@ -31,6 +31,7 @@
 
 | 如果你是... | 建議從這裡開始 |
 |------------|--------------|
+| **剛要開始裝 Hermes** | [01-installation.md](docs/getting-started/01-installation.md) → [02-useful-skills.md](docs/getting-started/02-useful-skills.md) |
 | **初次接觸 AI Agent** | [01-what-is-an-ai-agent.md](docs/01-fundamentals/01-what-is-an-ai-agent.md) → [02-agent-architecture.md](docs/01-fundamentals/02-agent-architecture.md) |
 | **想選一個框架** | [05-selecting-framework.md](docs/02-frameworks/05-selecting-framework.md) → [04-comparison.md](docs/02-frameworks/04-comparison.md) |
 | **想理解記憶怎麼設計** | [01-memory-taxonomy.md](docs/04-memory/01-memory-taxonomy.md) → [04-holographic-memory.md](docs/04-memory/04-holographic-memory.md) |
