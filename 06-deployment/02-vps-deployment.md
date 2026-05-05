@@ -1,6 +1,6 @@
 ---
 title: 02-vps-deployment
-date: 2024-05-05
+date: 2026-05-05
 category: Deployment
 tags: [vps, docker, production]
 ---

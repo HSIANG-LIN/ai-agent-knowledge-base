@@ -1,6 +1,6 @@
 ---
 title: 03-multi-agent-orchestration
-date: 2024-05-05
+date: 2026-05-05
 category: Advanced
 tags: [multi-agent, orchestration, coordination]
 ---

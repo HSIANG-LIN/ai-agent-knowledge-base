@@ -2,7 +2,7 @@
 title: CrewAI
 description: 基於角色扮演的多 Agent 協作框架
 category: Frameworks
-date: 2024-05-05
+date: 2026-05-05
 ---
 
 # CrewAI

@@ -2,7 +2,7 @@
 title: Framework Comparison
 description: AI Agent 框架綜合比較分析
 category: Frameworks
-date: 2024-05-05
+date: 2026-05-05
 ---
 
 # 框架比較分析

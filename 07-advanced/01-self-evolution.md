@@ -1,6 +1,6 @@
 ---
 title: 01-self-evolution
-date: 2024-05-05
+date: 2026-05-05
 category: Advanced
 tags: [self-evolution, gepa, dspy]
 ---

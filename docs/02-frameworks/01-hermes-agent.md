@@ -2,7 +2,7 @@
 title: Hermes Agent
 description: Nous Research 開發的自我改進 AI Agent 框架
 category: Frameworks
-date: 2024-05-05
+date: 2026-05-05
 ---
 
 # Hermes Agent

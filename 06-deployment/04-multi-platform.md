@@ -1,6 +1,6 @@
 ---
 title: 04-multi-platform-integration
-date: 2024-05-05
+date: 2026-05-05
 category: Deployment
 tags: [telegram, discord, multi-platform]
 ---

@@ -2,7 +2,7 @@
 title: LangChain
 description: LLM 應用開發最流行的框架
 category: Frameworks
-date: 2024-05-05
+date: 2026-05-05
 ---
 
 # LangChain

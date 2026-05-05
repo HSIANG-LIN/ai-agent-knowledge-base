@@ -1,6 +1,6 @@
 ---
 title: 工具呼叫生命週期
-date: 2024-05-05
+date: 2026-05-05
 tags: [patterns, tool-calling]
 ---
 

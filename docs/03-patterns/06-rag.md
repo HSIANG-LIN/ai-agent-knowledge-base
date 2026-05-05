@@ -1,6 +1,6 @@
 ---
 title: RAG 架構與策略
-date: 2024-05-05
+date: 2026-05-05
 tags: [patterns, rag]
 ---
 

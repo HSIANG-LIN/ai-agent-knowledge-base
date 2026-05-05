@@ -1,24 +1,44 @@
 ---
-title: 02-stock-scanner-case-study
-date: 2024-05-05
-category: Case Studies
-tags: [case-study, stock-scanner, automation]
+title: Stock Scanner 實戰案例
+description: 從需求到實現 — 自動化股票掃描器的完整開發歷程
+tags: [case-study, stock, scanner, yfinance, discord]
+date: 2026-05-05
 ---
 
-# 實戰案例：股票掃描器 (Stock Scanner)
+# Stock Scanner 實戰案例
 
-這是一個結合了資料抓取、分析與自動發送訊息的完整 Agent 流程。
+## 專案背景
 
-## 1. 系統架構
-- **Data Ingestion**：使用 `yfinance` 進行批量下載；若遇到 API 限制，自動 fallback 到 `FinMind`。
-- **Analysis Engine**：計算移動平均線 (MA)、RSI 等技術指標。
-- **Delivery Layer**：透過 Discord Webhook 將掃描結果推送到指定的頻道。
+建立一個每日自動掃描台股、找出潛在交易標的的系統，並透過 Discord 推送結果給使用者。
 
-## 2. 自動化工作流 (Workflow)
-1. **Cron Scheduling**：利用 Linux Crontab 或 Python `schedule` 庫，設定每日收盤後啟動。
-2. **Execution**：Agent 啟動 $\rightarrow$ 下載數據 $\rightarrow$ 篩選標的 $\rightarrow$ 生成摘要。
-3. **Notification**：發送訊息 $\rightarrow$ 任務結束 $\rightarrow$ 進入睡眠。
+## 架構設計
 
-## 3. 關鍵技術點
-- **Error Handling**：處理網路斷線與 API 限制。
-- **State Management**：記錄上次掃描的時間點，避免重複處理。
+```
+┌──────────┐   ┌──────────────┐   ┌──────────┐   ┌───────────┐
+│yfinance  │ → │ Strategy     │ → │ Notifier │ → │ Discord   │
+│Data Prov │   │ Engine       │   │ (Filter) │   │ Channel   │
+└──────────┘   └──────────────┘   └──────────┘   └───────────┘
+     ↑                ↑                 ↑              ↑
+ Batch Download   6 Strategies     Score/Filter    Cron Schedule
+ .TW/.TWO                          Top N Results   Daily 15:00
+```
+
+## 關鍵決策
+
+### 資料源：yfinance > FinMind
+- 原本使用 FinMind API，但遭遇 402 rate limit
+- 重構成 yfinance 為主要資料源（batch download，一次 100 檔，間隔 5 秒）
+- `.TW`（上市）和 `.TWO`（上櫃）雙後綴支援
+- FinMind 降級為最後補抓備援，且有 rate-limit 自動偵測
+
+### 傳送：Discord only
+- Telegram 作為開發溝通頻道，股票推送只走 Discord
+- Systemd cron job 觸發，script 內建 Notifier 處理發送
+
+## 策略引擎
+
+6 個選股策略同時運作，各自產出分數後加權排序。
+
+## 覆蓋率提升
+
+從 FinMind 時期約 25% 覆蓋率，透過 yfinance batch 模式提升至 73%。

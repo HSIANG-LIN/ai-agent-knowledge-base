@@ -1,6 +1,6 @@
 ---
 title: 02-vector-memory-deep-dive
-date: 2024-05-05
+date: 2026-05-05
 category: Advanced
 tags: [memory, vector, rag, knowledge-graph]
 ---
