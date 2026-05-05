@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes Agent Architecture</title>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+        }
+        svg {
+            filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.3));
+        }
+        .label { font-size: 14px; font-weight: bold; fill: #f8fafc; }
+        .sub-label { font-size: 10px; fill: #94a3b8; }
+        .box { stroke-width: 2; }
+        .arrow { stroke: #38bdf8; stroke-width: 2; fill: #38bdf8; }
+        .neon-blue { fill: #0ea5e9; stroke: #38bdf8; }
+        .neon-purple { fill: #a855f7; stroke: #c084fc; }
+        .neon-green { fill: #10b981; stroke: #34d399; }
+        .neon-orange { fill: #f59e0b; stroke: #fbbf24; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+            <!-- User Layer -->
+            <rect x="350" y="20" width="100" height="40" rx="5" class="box neon-blue" />
+            <text x="400" y="45" text-anchor="middle" class="label">User Interface</text>
+            <text x="400" y="65" text-anchor="middle" class="sub-label">(Telegram/Discord/CLI)</text>
+
+            <line x1="400" y1="60" x2="400" y2="100" class="arrow" marker-end="url(#arrowhead)" />
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" />
+                </marker>
+            </defs>
+
+            <!-- Gateway & Session -->
+            <rect x="325" y="100" width="150" height="50" rx="5" class="box neon-blue" />
+            <text x="400" y="130" text-anchor="middle" class="label">Gateway</text>
+            
+            <line x1="400" y1="150" x2="400" y2="180" class="arrow" />
+            
+            <rect x="325" y="180" width="150" height="50" rx="5" class="box neon-blue" />
+            <text x="400" y="210" text-anchor="middle" class="label">Session Manager</text>
+
+            <line x1="400" y1="230" x2="400" y2="260" class="arrow" />
+
+            <!-- Core Engine (Dispatcher/Skill/Memory/Delegation) -->
+            <rect x="150" y="260" width="500" height="120" rx="10" class="box neon-purple" style="fill: rgba(168, 85, 247, 0.1);" />
+            <text x="400" y="285" text-anchor="middle" class="label" style="font-size: 18px;">Hermes Core Engine</text>
+            
+            <!-- Engine Sub-components -->
+            <rect x="170" y="300" width="100" height="60" rx="5" class="box neon-green" />
+            <text x="220" y="335" text-anchor="middle" class="label" style="font-size: 10px;">Tool Dispatcher</text>
+
+            <rect x="285" y="300" width="100" height="60" rx="5" class="box neon-green" />
+            <text x="335" y="335" text-anchor="middle" class="label" style="font-size: 10px;">Skill Engine</text>
+
+            <rect x="415" y="300" width="100" height="60" rx="5" class="box neon-green" />
+            <text x="465" y="335" text-anchor="middle" class="label" style="font-size: 10px;">Memory Provider</text>
+
+            <rect x="540" y="300" width="100" height="60" rx="5" class="box neon-green" />
+            <text x="590" y="335" text-anchor="middle" class="label" style="font-size: 10px;">Delegation System</text>
+
+            <!-- LLM -->
+            <line x1="400" y1="380" x2="400" y2="430" class="arrow" />
+            <rect x="325" y="430" width="150" height="50" rx="5" class="box neon-orange" />
+            <text x="400" y="460" text-anchor="middle" class="label">LLM (Ollama/API)</text>
+        </svg>
+    </div>
+</body>
+</html>

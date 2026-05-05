@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Pyramid</title>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container { width: 90%; max-width: 800px; }
+        svg { filter: drop-shadow(0 0 15px rgba(16, 185, 129, 0.2)); }
+        .label { font-size: 16px; font-weight: bold; fill: #ffffff; }
+        .sub-label { font-size: 12px; fill: #cbd5e1; }
+        .pyramid-layer { stroke-width: 2; transition: all 0.3s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+            <!-- Top Layer: Knowledge Graph -->
+            <polygon points="300,50 450,150 150,150" class="pyramid-layer" style="fill: #a855f7; stroke: #c084fc;" />
+            <text x="300" y="120" text-anchor="middle" class="label">Knowledge Graph</text>
+            <text x="300" y="140" text-anchor="middle" class="sub-label">Relational / Reasoning</text>
+
+            <!-- Middle Layer: Vector DB -->
+            <polygon points="150,150 450,150 500,280 100,280" class="pyramid-layer" style="fill: #38bdf8; stroke: #7dd3fc;" />
+            <text x="300" y="220" text-anchor="middle" class="label">Vector DB</text>
+            <text x="300" y="240" text-anchor="middle" class="sub-label">Semantic / Embeddings (HRR)</text>
+
+            <!-- Bottom Layer: SQLite/FTS -->
+            <polygon points="100,280 500,280 550,420 50,420" class="pyramid-layer" style="fill: #10b981; stroke: #34d399;" />
+            <text x="300" y="360" text-anchor="middle" class="label">SQLite (FTS5)</text>
+            <text x="300" y="380" text-anchor="middle" class="sub-label">Structured / Keyword Search</text>
+
+            <!-- Connection Lines -->
+            <path d="M300 150 L300 160" stroke="#94a3b8" stroke-width="2" fill="none" />
+            <path d="M300 280 L300 290" stroke="#94a3b8" stroke-width="2" fill="none" />
+        </svg>
+    </div>
+</body>
+</html>

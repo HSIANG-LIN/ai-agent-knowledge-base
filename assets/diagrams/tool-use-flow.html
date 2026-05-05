@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Use Flow</title>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container { width: 90%; max-width: 900px; }
+        .node { rx: 10; stroke-width: 2; }
+        .arrow { stroke: #94a3b8; stroke-width: 2; fill: none; }
+        .label { font-size: 12px; fill: #f8fafc; font-weight: bold; }
+        .sub-label { font-size: 10px; fill: #94a3b8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Step 1: Input -->
+            <rect x="10" y="75" width="120" height="50" rx="8" class="node" style="fill: #1e293b; stroke: #38bdf8;" />
+            <text x="70" y="105" text-anchor="middle" class="label">User Input</text>
+
+            <line x1="130" y1="100" x2="170" y2="100" class="arrow" marker-end="url(#arrow)" />
+
+            <!-- Step 2: Intent -->
+            <rect x="180" y="75" width="120" height="50" rx="8" class="node" style="fill: #1e293b; stroke: #a855f7;" />
+            <text x="240" y="105" text-anchor="middle" class="label">Intent Recognition</text>
+
+            <line x1="300" y1="100" x2="340" y2="100" class="arrow" marker-end="url(#arrow)" />
+
+            <!-- Step 3: Validation -->
+            <rect x="350" y="75" width="120" height="50" rx="8" class="node" style="fill: #1e293b; stroke: #f59e0b;" />
+            <text x="410" y="105" text-anchor="middle" class="label">Schema Validation</text>
+
+            <line x1="470" y1="100" x2="510" y2="100" class="arrow" marker-end="url(#arrow)" />
+
+            <!-- Step 4: Execute -->
+            <rect x="520" y="75" width="120" height="50" rx="8" class="node" style="fill: #1e293b; stroke: #10b981;" />
+            <text x="580" y="105" text-anchor="middle" class="label">Execute Tool</text>
+
+            <line x1="640" y1="100" x2="680" y2="100" class="arrow" marker-end="url(#arrow)" />
+
+            <!-- Step 5: Result -->
+            <rect x="690" y="75" width="100" height="50" rx="8" class="node" style="fill: #1e293b; stroke: #f8fafc;" />
+            <text x="740" y="105" text-anchor="middle" class="label">Result</text>
+
+            <!-- Feedback Loop -->
+            <path d="M740 125 Q400 180 70 125" stroke="#f43f5e" stroke-width="2" stroke-dasharray="5,5" fill="none" marker-end="url(#arrow-red)" />
+            <text x="400" y="175" text-anchor="middle" class="sub-label" style="fill: #f43f5e;">Feedback Loop / Reflection</text>
+
+            <defs>
+                <marker id="arrow" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                </marker>
+                <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#f43f5e" />
+                </marker>
+            </defs>
+        </svg>
+    </div>
+</body>
+</html>
