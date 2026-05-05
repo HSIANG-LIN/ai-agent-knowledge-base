@@ -67,7 +67,7 @@
 
 ## 🤝 貢獻
 
-歡迎提交 PR！請閱讀 [CONTRIBUTING.md](CONTRIBUTING.md) 了解貢獻方式。
+歡迎提交 PR！直接 fork 後發 PR，或開 Issue 討論想新增的方向。
 
 內容方向：
 - 修正錯誤或補充遺漏的實作細節
