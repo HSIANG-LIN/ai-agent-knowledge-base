@@ -1,0 +1,36 @@
+# Agent 術語表
+
+- **Agent / AI Agent** — 能夠感知環境、進行推理並自主執行任務以達成目標的智能實體。→ 參考 `docs/10-cost-management/01-token-economics.md`
+- **Chain-of-Thought (CoT)** — 一種提示工程技術，引導模型展示推理步驟以提升複雜問題的解決能力。→ 參考 `docs/10-cost-management/02-model-routing-strategies.md`
+- **Context Window** — 模型在單次處理中能夠同時「看到」並考慮的最大 Token 數量。→ 參考 `docs/10-cost-management/01-token-economics.md`
+- **Cron / Scheduled Task** — 定期執行的自動化任務，用於處理週期性工作。→ 參考 `docs/10-cost-management/03-caching-and-budget-control.md`
+- **Delegation (Multi-Agent)** — 將複雜任務拆解並分配給不同專業化 Agent 執行的過程。→ 參考 `docs/10-cost-management/02-model-routing-strategies.md`
+- **Embedding** — 將文本或數據轉換為高維向量的過程，用於計算語義相似度。→ 參考 `docs/10-cost-management/03-caching-and-budget-control.md`
+- **FTS5 (Full-Text Search)** — SQLite 的全文檢索擴充功能，用於高效的文本內容搜索。→ 參考 `docs/10-cost-management/03-caching-and-budget-control.md`
+- **Function Calling** — 模型識別並生成符合特定結構（如 JSON）參數的過程，以便調用外部工具。→ 參考 `docs/10-cost-management/01-token-economics.md`
+- **Gateway** — 介於應用程式與多個 LLM Provider 之間的仲裁層，負責路由、限流與重試。→ 參考 `docs/10-cost-management/02-model-routing-strategies.md`
+- **GEPA (Genetic Evolution of Prompt Agents)** — 一種透過遺傳算法優化 Prompt 與 Agent 行為的進化機制。→ 參考 `docs/10-cost-management/02-model-routing-strategies.md`
+- **Hindsight** — 透過回顧過去的執行結果來優化未來決策的機制。→ 參考 `docs/10-cost-management/03-caching-and-budget-control.md`
+- **Holographic Memory** — 一種利用高維向量表示法實現高效、非線性檢索的記憶機制。→ 參考 `docs/10-cost-management/01-token-economics.md`
+- **HRR (Holographic Reduced Representations)** — 一種用於將多個信息編碼進單一向量的數學框架，常用於記憶系統。→ 參考 `docs/10-cost-management/01-token-economics.md`
+- **JSON-RPC** — 一種輕量級的遠程過程調用協議，常用於 Agent 與工具間的通訊。→ 參考 `docs/10-cost-management/02-model-routing-strategies.md`
+- **Knowledge Graph** — 以節點和邊的形式表示實體及其關係的結構化數據庫。→ 參考 `docs/10-cost-management/03-caching-and-budget-control.md`
+- **LLM (Large Language Model)** — 處理與生成自然語言的大規模預訓練神經網絡模型。→ 參考 `docs/10-cost-management/01-token-economics.md`
+- **MCP (Model Context Protocol)** — 一種開放標準，旨在讓 AI 模型能更輕鬆地存取外部數據與工具。→ 參考 `docs/10-cost-management/02-model-routing-strategies.md`
+- **Memory Provider** — 專門負責存儲、檢索與管理 Agent 長期或短期記憶的組件。→ 參考 `docs/10-cost-management/01-token-economics.md`
+- **NER (Named Entity Recognition)** — 從文本中識別出專有名詞（如人名、地名、組織）的技術。→ 參考 `docs/10-cost-management/03-caching-and-budget-control.md`
+- **Ollama** — 一個可在本地輕鬆運行開源大型語言模型的框架。→ 參考 `docs/10-cost-management/02-model-routing-strategies.md`
+- **Plan-and-Execute** — 一種 Agent 架構，先制定完整計劃再逐一執行步驟。→ 參考 `docs/10-cost-management/02-model-routing-strategies.md`
+- **Prompt Injection** — 一種攻擊手段，透過惡意輸入誘導模型無視原始指令並執行非法操作。→ 參考 `docs/10-cost-management/01-token-economics.md`
+- **RAG (Retrieval-Augmented Generation)** — 結合檢索外部知識庫與模型生成技術，以減少幻覺並提升準確度。→ 參考 `docs/10-cost-management/03-caching-and-budget-control.md`
+- **ReAct (Reasoning + Acting)** — 一種結合推理與行動的框架，讓 Agent 在執行每一步前先進行思考。→ 參考 `docs/10-cost-management/01-token-economics.md`
+- **Reflection** — 模型對自身生成內容進行批判與自我修正的過程。→ 參考 `docs/10-cost-management/02-model-routing-strategies.md`
+- **Skill** — Agent 所具備的特定能力，通常由一組特定的工具或提示詞組成。→ 參考 `docs/10-cost-management/02-model-routing-strategies.md`
+- **SSE (Server-Sent Events)** — 一種允許伺服器向客戶端推送即時數據流的技術，常用於串流 LLM 回應。→ 參考 `docs/10-cost-management/02-model-routing-strategies.md`
+- **System Prompt** — 用於定義 Agent 角色、行為準則與限制條件的核心指令。→ 參考 `docs/10-cost-management/01-token-economics.md`
+- **Tirith** — (知識庫特有術語，待完善定義) → 參考 `docs/10-cost-management/02-model-routing-strategies.md`
+- **Token** — 模型處理文本的最小單位，直接影響計費與上下文容量。→ 參考 `docs/10-cost-management/01-token-economics.md`
+- **Tool / Tool Calling** — Agent 使用外部函數或 API 來擴展其能力（如搜索、計算）的行為。→ 參考 `docs/10-cost-management/01-token-economics.md`
+- **Trust Scoring** — 對 Agent 執行結果或調用工具的可靠程度進行評分。→ 參考 `docs/10-cost-management/02-model-routing-strategies.md`
+- **Vector Database** — 專門存儲與檢索高維向量數據（如 Embedding）的數據庫。→ 參考 `docs/10-cost-management/03-caching-and-budget-control.md`
+- **YAML Frontmatter** — 在 Markdown 文件頂部使用的 YAML 格式元數據，用於定義文件屬性。→ 參考 `docs/10-cost-management/02-model-routing-strategies.md`

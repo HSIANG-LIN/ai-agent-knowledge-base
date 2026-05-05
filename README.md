@@ -20,7 +20,11 @@
 │   ├── 05-tools-mcp/        # MCP 協定：協議解析、工具設計、Server 配置、最佳實踐
 │   ├── 06-deployment/       # 部署指南：本機、VPS、Docker、多平台（Telegram/Discord）
 │   ├── 07-advanced/         # 進階主題：自我演化 (GEPA)、向量記憶深度分析、多 Agent 協調
-│   └── 08-case-studies/     # 實戰案例：Hermes 生態全景、股票掃描器
+│   ├── 08-case-studies/     # 實戰案例：客服 Agent、研究助理（可置換為你的專案）
+│   ├── 09-security/         # 安全專章：Prompt Injection、Tirith 策略引擎、沙箱、機密管理
+│   ├── 10-cost-management/  # 成本管理：Token 計費、模型路由、快取與預算控制
+│   ├── tutorials/           # 逐步教學：從安裝、串接 TG、寫 Skill 到排程與 MCP
+│   └── glossary.md          # 術語表（A-Z）
 ├── assets/diagrams/         # 架構圖（開瀏覽器即可檢視的 HTML）
 └── references/              # 論文清單與外部資源
 ```
@@ -37,7 +41,11 @@
 | **想理解記憶怎麼設計** | [01-memory-taxonomy.md](docs/04-memory/01-memory-taxonomy.md) → [04-holographic-memory.md](docs/04-memory/04-holographic-memory.md) |
 | **想部署上線** | [01-local-setup.md](docs/06-deployment/01-local-setup.md) → [02-vps-deployment.md](docs/06-deployment/02-vps-deployment.md) |
 | **想實作多 Agent 系統** | [04-multi-agent.md](docs/03-patterns/04-multi-agent.md) → [03-multi-agent-orchestration.md](docs/07-advanced/03-multi-agent-orchestration.md) |
-| **想讓 Agent 自我進化** | [01-self-evolution.md](docs/07-advanced/01-self-evolution.md) + [assets/diagrams/agent-architecture.html](assets/diagrams/agent-architecture.html) |
+|| **想讓 Agent 自我進化** | [01-self-evolution.md](docs/07-advanced/01-self-evolution.md) + [assets/diagrams/agent-architecture.html](assets/diagrams/agent-architecture.html) |
+|| **想強化安全防護** | [01-prompt-injection.md](docs/09-security/01-prompt-injection.md) → [02-tirith-policy-engine.md](docs/09-security/02-tirith-policy-engine.md) |
+|| **想控管 LLM 成本** | [01-token-economics.md](docs/10-cost-management/01-token-economics.md) → [02-model-routing-strategies.md](docs/10-cost-management/02-model-routing-strategies.md) |
+|| **想從零開始實作** | [tutorials/01-hello-hermes.md](docs/tutorials/01-hello-hermes.md) → [tutorials/05-memory-and-mcp.md](docs/tutorials/05-memory-and-mcp.md) |
+|| **快速查名詞** | [glossary.md](docs/glossary.md) |
 
 ---
 
